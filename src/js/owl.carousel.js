@@ -514,7 +514,7 @@
 			// responsive class
 			if (settings.responsiveClass) {
 				this.$element.attr('class',
-					this.$element.attr('class').replace(new RegExp('(' + this.options.responsiveClass + '-)\\S+\\s', 'g'), '$1' + match)
+					(this.$element.attr('class') || '').replace(new RegExp('(' + this.options.responsiveClass + '-)\\S+\\s', 'g'), '$1' + match)
 				);
 			}
 		}
